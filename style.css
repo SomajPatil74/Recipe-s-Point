@@ -1,0 +1,643 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.mainbody {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("img2.jpg");
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+li {
+    list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+nav {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-links a {
+    color: black;
+}
+
+/* LOGO */
+.logoimg {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    font-size: 32px;
+    padding-left: 10px;
+    padding-top: 8px;
+    font-weight: 600;
+}
+
+.logoimg img {
+    height: 45px;
+    width: auto;
+}
+
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.menu li:hover {
+    background-color: black;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.nav-links .menu a:hover {
+    color: white;
+}
+
+.menu li {
+    padding: 5px 14px;
+}
+
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+    display: none;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        backdrop-filter: blur(5px);
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+        margin-top: 11px;
+    }
+
+    .menu li:hover {
+        display: inline-block;
+        background-color: black;
+        transition: 0.3s ease;
+    }
+
+    .menu li+li {
+        margin-top: 12px;
+    }
+
+    input[type=checkbox]:checked~.menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15rem;
+}
+
+.heading h1 {
+    font-size: 9rem;
+    font-weight: 800;
+}
+
+.heading h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .heading {
+        display: flex;
+        align-items: center;
+    }
+
+    .heading h1 {
+        font-size: 3.5rem;
+    }
+
+    .heading h3 {
+        font-size: 1.3rem;
+    }
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url("img1.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+    width: 95%;
+    border: solid 1px white;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+
+.hero .search input {
+    width: 80%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.hero .search img {
+    height: 30px;
+    width: auto;
+    margin-top: 8px;
+    padding-left: 10px;
+}
+
+.hero .hero2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 7%;
+    padding-left: 10px;
+    gap: 15px;
+    flex-direction: row;
+    width: 100%;
+}
+
+.hero .hero2 .recipe {
+    height: 18rem;
+    width: 10%;
+    border-radius: 10px;
+    border: solid 2px white;
+}
+
+.hero .hero2 .recipe p {
+    font-size: 20px;
+    text-align: center;
+    color: aliceblue;
+    padding-top: 10px;
+    font-weight: 600;
+}
+
+.hero .hero2 .recipe:hover {
+    width: 40%;
+    transition: 0.5s ease;
+
+    p {
+        font-size: 40px;
+        font-weight: 800;
+        transition: 0.5s ease;
+    }
+}
+
+.hero .hero2 .div1 {
+    background-image: url("img3.jpg");
+    background-size: cover;
+}
+
+.hero .hero2 .div2 {
+    background-image: url("img4.jpg");
+    background-size: cover;
+}
+
+.hero .hero2 .div3 {
+    background-image: url("img5.jpg");
+    background-size: cover;
+}
+
+.hero .hero2 .div4 {
+    background-image: url("img6.jpg");
+    background-size: cover;
+}
+
+.hero .hero2 .div5 {
+    background-image: url("img7.jpg");
+    background-size: cover;
+}
+
+
+@media screen and(max-width:768px) {
+    .hero .search input {
+        height: 35px;
+    }
+
+    .hero .hero2 .recipe p {
+        font-size: 10px;
+    }
+}
+
+#About {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    padding-top: 100px;
+    height: 100vh;
+    width: 100%;
+    background-image: url("img8.jpg");
+    background-size: cover;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 85%;
+}
+
+.about h1 {
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    border-bottom: solid 2px white;
+}
+
+.about h1:hover {
+    color: black;
+    border-bottom: solid 2px black;
+}
+
+.about p {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.about p b {
+    color: black;
+}
+
+.about .btn1 {
+    background-color: #24f091;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    border: solid 1.5px white;
+    color: rgb(7, 11, 24);
+    margin-top: 20px;
+}
+
+.about .btn1:hover {
+    border: solid 1.5px white;
+    border-radius: 10px;
+    background-color: rgb(7, 11, 24);
+    color: white;
+}
+
+.about .follow {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    align-items: center;
+}
+
+.about .follow h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: solid 2px white;
+}
+
+.about .follow h1:hover {
+    color: black;
+    border-bottom: solid 2px black;
+}
+
+.about .follow .media {
+    border: solid 2px white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    height: 60px;
+}
+
+.about .follow .media a {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    color: #fff;
+}
+
+.about .follow .media a:hover {
+    color: black;
+}
+
+@media screen and (max-width:768px) {
+    .about h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .about p {
+        font-size: 18px;
+    }
+
+    .about .btn1 {
+        padding: 7px 14px;
+        font-size: 12px;
+        margin-top: 14px;
+    }
+
+    .about .follow h1 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .about .follow .media {
+        width: 250px;
+        height: 45px;
+    }
+
+    .about .follow .media a {
+        font-size: 25;
+    }
+}
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(img9.jpg);
+    background-size: cover;
+}
+
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h1 {
+    padding-top: 15px;
+    font-size: 40px;
+    font-weight: 700;
+    color: black;
+    border-bottom: solid 2px black;
+}
+
+.contact .content p {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 25px;
+    color: black;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contactInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon {
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text {
+    display: flex;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactInfo .box .text h3 {
+    font-weight: 900;
+    color: #00bcd4;
+}
+
+.contactForm {
+    width: 40%;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding-bottom: 20px;
+}
+
+.contactForm h2 {
+    font-size: 30px;
+    color: #333;
+    font-weight: 600;
+}
+
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus~span,
+.contactForm .inputBox input:valid~span,
+.contactForm .inputBox textarea:focus~span,
+.contactForm .inputBox textarea:valid~span {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+    background-color: #24f091;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    border: solid 1.5px white;
+    color: rgb(7, 11, 24);
+    margin-top: 20px;
+}
+
+.contactForm .inputBox input[type="submit"]:hover {
+    border: solid 1.5px white;
+    border-radius: 10px;
+    background-color: rgb(7, 11, 24);
+    color: white;
+}
+
+@media(max-width:768px) {
+    .contact {
+        padding: 15px 30px;
+    }
+
+    .contact .content {
+        max-width: 400px;
+    }
+
+    .contact .content h1 {
+        padding-top: 7px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .contact .content p {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container .contactInfo {
+        margin-bottom: 10px;
+    }
+
+    .container .contactInfo {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .container .contactInfo .box {
+        padding: 10px 0;
+    }
+
+    .container .contactInfo .box .icon {
+        min-width: 35px;
+        height: 35px;
+        font-size: 13px;
+        margin-left: 200px;
+    }
+
+    .container .contactInfo .box .text {
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+    .contactForm {
+        padding: 10px;
+        padding-bottom: 10px;
+        width: 350px;
+    }
+
+    .contactForm h2 {
+        font-size: 15px;
+    }
+
+    .contactForm .inputBox {
+        margin-top: 6px;
+    }
+
+    .contactForm .inputBox input,
+    .contactForm .inputBox textarea {
+        font-size: 9px;
+        margin: 5px 0;
+    }
+
+    .contactForm .inputBox span {
+        font-size: 9px;
+    }
+
+    .contactForm .inputBox input:focus~span,
+    .contactForm .inputBox input:valid~span,
+    .contactForm .inputBox textarea:focus~span,
+    .contactForm .inputBox textarea:valid~span {
+        font-size: 8px;
+    }
+
+    .contactForm .inputBox input[type="submit"] {
+        padding: 5px 10px;
+        margin-top: 8px;
+        font-size: 15px;
+    }
+}

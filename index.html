@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe's Point</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="mainbody">
+        <nav>
+            <!-- LOGO -->
+            <div class="logoimg">
+                <img src="logo.png">
+                <div class="logo">Recipe's Point</div>
+            </div>
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+                <!-- USING CHECKBOX HACK -->
+                <input type="checkbox" id="checkbox_toggle" />
+                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+                <!-- NAVIGATION MENUS -->
+                <div class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </div>
+            </ul>
+        </nav>
+
+        <div class="heading" id="heading">
+            <h1>RECIPE'S POINT</h1>
+            <h3>UNLOCK THE SECRETS OF DELICIOUSNESS</h3>
+        </div>
+    </div>
+
+    <section id="recipes">
+        <div class="hero">
+            <div class="search">
+                <input type="text" placeholder="Search recipes...">
+                <img src="search.png">
+            </div>
+            <div class="hero2">
+                <div class="div1 recipe">
+                    <p>Salad</p>
+                </div>
+                <div class="div2 recipe">
+                    <p>Soup</p>
+                </div>
+                <div class="div3 recipe">
+                    <p>Pasta</p>
+                </div>
+                <div class="div4 recipe">
+                    <p>Pizza</p>
+                </div>
+                <div class="div5 recipe">
+                    <p>Curry</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="About">
+        <div class="about">
+            <h1>About Us</h1>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to <b>Recipe's Point</b>, your ultimate
+                destination for culinary inspiration and delightful gastronomic experiences! At <b>Recipe's Point</b>,
+                we are passionate about bringing the joy of cooking to your kitchen and making every meal a
+                memorable one.
+                Our mission is to empower home cooks, food enthusiasts, and anyone with a love for delicious
+                creations. Whether you're a seasoned chef or a beginner exploring the world of flavors,
+                <b>Recipe's Point</b> is here to be your go-to guide on your culinary journey.
+            </p>
+            <button class="btn1">Know more</button>
+            <div class="follow">
+                <h1>Follow us on</h1>
+                <div class="media">
+                    <div class="ig a1"><a href="#"><i class='bx bxl-instagram'></i></a></div>
+                    <div class="fb a1"><a href='#'><i class='bx bxl-facebook-circle'></i></a></div>
+                    <div class="tw a1"><a href='#'><i class='bx bxl-twitter'></i></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="content">
+            <h1>Contact Us</h1>
+            <p>Have a question, suggestion, or just want to say hello? We'd love to hear from you!
+                Feel free to reach out to <b>Recipe's Point</b> through following contact modes.
+                Our dedicated customer support team is here to assist you with any inquiries or issues
+                you may have. We strive to provide prompt and helpful responses to ensure you have the
+                best experience with Recipe's Point.
+            </p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class='bx bxs-map'></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Patil Galli,<br> near Chatrapati Shivaji Maharaj Statue,<br>home no.-08</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class='bx bxs-phone-call'></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>+91 6366317156<br>304-534-4234<br></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class='bx bxs-envelope'></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>RecipesPoint@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contactForm">
+                <form>
+                    <h2>Give Feedback</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required>
+                        <span>Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <!-- <input type="password" name="" required> -->
+                        <textarea required type="password"></textarea>
+                        <span>write message..</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="SUBMIT">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
